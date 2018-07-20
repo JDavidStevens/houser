@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import House from '../House/House';
+import axios from 'axios';
 
 export default class Dashboard extends Component {
   constructor() {
@@ -10,9 +11,9 @@ export default class Dashboard extends Component {
   }
 
   componentDidMount() {
-    axios.get(`/api/houses`).then(response => {
+    axios.get('/api/houses').then(results => {
       this.setState({
-        houses: response.data
+        houses: results.data
       });
     });
   }

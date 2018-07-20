@@ -20,7 +20,7 @@ export default class Step2 extends Component {
       <div>
         <h2>Add New Listing</h2>
         <button>Cancel</button>
-        <input onChange={e => handleInputImage(e.target.value)} />
+        <input onChange={e => this.handleInputImage(e.target.value)} />
         <button>Previous Step</button>
         <button>Next Step</button>
       </div>

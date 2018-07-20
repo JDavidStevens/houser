@@ -13,8 +13,8 @@ massive(process.env.CONNECTION_STRING)
   })
   .catch(err => console.log(err));
 
-app.get(`/api/houses`, controller.create);
-app.post(`/api.houses`, controller.update);
+app.get('/api/houses', controller.create);
+app.post('/api/houses', controller.update);
 
 const port = 4000;
 app.listen(port, () => {

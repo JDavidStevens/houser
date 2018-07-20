@@ -9,6 +9,12 @@ const initialState = {
   rent: 0
 };
 
+const UPDATE_INPUT_NAME = 'UPDATE_INPUT_NAME';
+const UPDATE_INPUT_ADDRESS = 'UPDATE_INPUT_ADDRESS';
+const UPDATE_INPUT_CITY = 'UPDATE_INPUT_CITY';
+const UPDATE_INPUT_STATE = 'UPDATE_INPUT_STATE';
+const UPDATE_INPUT_ZIPCODE = 'UPDATE_INPUT_ZIPCODE';
+
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case UPDATE_INPUT_NAME:
@@ -31,19 +37,20 @@ export function inputName(name) {
     type: UPDATE_INPUT_NAME,
     payload: name
   };
-  export function inputAddress(address) {
-    return {
-      type: UPDATE_INPUT_ADDRESS,
-      payload: address
-    };
-  }
-  export function inputCity(city) {
-    return {
-      type: UPDATE_INPUT_CITY,
-      payload: city
-    };
-  }
 }
+export function inputAddress(address) {
+  return {
+    type: UPDATE_INPUT_ADDRESS,
+    payload: address
+  };
+}
+export function inputCity(city) {
+  return {
+    type: UPDATE_INPUT_CITY,
+    payload: city
+  };
+}
+
 export function inputState(state) {
   return {
     type: UPDATE_INPUT_STATE,
