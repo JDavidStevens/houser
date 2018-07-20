@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default function House() {
+export default function House(props) {
   return (
     <div>
       House
